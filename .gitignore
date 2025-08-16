@@ -1,0 +1,19 @@
+# Ignore Python's cache and virtual environments
+__pycache__/
+venv/
+*.env
+.env
+
+# Ignore the dataset folder
+data/
+
+# Ignore saved models and results
+saved_models/
+results/
+
+# Ignore IDE-specific folders
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
