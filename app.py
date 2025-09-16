@@ -83,7 +83,7 @@ try:
         for i, image_name in enumerate(sample_images):
             with cols[i]:
                 image_path = os.path.join(demo_images_path, image_name)
-                st.image(image_path, caption=image_name, use_column_width=True)
+                st.image(image_path, caption=image_name, use_container_width=True)
                 
                 # Each button has a unique key to differentiate it
                 if st.button(f"Classify {image_name}", key=image_name):
@@ -114,7 +114,7 @@ uploaded_file = st.file_uploader(
 if uploaded_file is not None:
     # Display the uploaded image
     image_bytes = uploaded_file.getvalue()
-    st.image(image_bytes, caption='Uploaded Image.', use_column_width=True)
+    st.image(image_bytes, caption='Uploaded Image.', use_container_width=True)
 
     # Show a spinner while classifying
     with st.spinner("Classifying..."):
