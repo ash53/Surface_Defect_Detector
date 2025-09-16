@@ -73,7 +73,9 @@ st.markdown("---")
 st.subheader("1. Try a Sample Image from the Dataset")
 
 # Find sample images in the 'demo_images' folder
-demo_images_path = "demo_images"
+script_dir = os.path.dirname(__file__)
+demo_images_path = os.path.join(script_dir, "demo_images")
+# demo_images_path = "demo_images"
 try:
     sample_images = [f for f in os.listdir(demo_images_path) if f.endswith(('.png', '.jpg', '.bmp'))]
     
