@@ -4,7 +4,7 @@ A deep learning model built with PyTorch to detect and classify common surface d
 
 ---
 
-## ✨ Features
+## Features
 
 - **Framework:** PyTorch
 - **Model:** Pre-trained ResNet18
@@ -35,7 +35,7 @@ surface-defect-detector/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 Follow these steps to set up and run the project on your local machine.
 
@@ -67,7 +67,7 @@ pip install -r requirements.txt
 
 ---
 
-## 💻 How to Run
+## How to Run
 
 1.  **Modify the data path:** Open the `train.py` script and update the `data_dir` variable to point to your `data` folder.
 
@@ -86,6 +86,6 @@ The script will start the training process and print the loss and accuracy for e
 
 ---
 
-## 📈 Expected Results
+## Expected Results
 
 The model will train for 25 epochs. After training is complete, you will see a summary of the best validation accuracy achieved. A plot showing the training and validation accuracy/loss over all epochs will be displayed.
