@@ -111,9 +111,14 @@ def main():
     plot_history(history)
 
     # --- 8. Save the Model ---
-    # Uncomment the following line to save the trained model's weights for future use.
-    # torch.save(model.state_dict(), 'saved_models/surface_defect_detector_best.pth')
-    # print("\nBest model weights saved to 'saved_models/surface_defect_detector_best.pth'")
+    # Create the directory if it doesn't exist
+    if not os.path.exists('saved_models'):
+        os.makedirs('saved_models')
+        print("Created 'saved_models' directory.")
+        
+    # Save the trained model's weights for future use.
+    torch.save(model.state_dict(), 'saved_models/surface_defect_detector_best.pth')
+    print("\nBest model weights saved to 'saved_models/surface_defect_detector_best.pth'")
 
 
 def train_model(model, criterion, optimizer, dataloaders, dataset_sizes, device, num_epochs=25):

@@ -1,17 +1,45 @@
-# Ignore Python's cache and virtual environments
+# ==============================================================================
+# Python / Data Science
+# ==============================================================================
+
+# Virtual Environments & Caches
 __pycache__/
 venv/
+.venv/
 *.env
 .env
+.DS_Store
 
-# Ignore the dataset folder
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Logs and temporary files
+*.log
+*.swp
+*~
+
+# ==============================================================================
+# Project Specific
+# ==============================================================================
+
+# Dataset, models, and results
 data/
-
-# Ignore saved models and results
 saved_models/
 results/
 
-# Ignore IDE-specific folders
+# ==============================================================================
+# OS & IDE Specific
+# ==============================================================================
+
+# macOS
+.DS_Store
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDEs
 .vscode/
 .idea/
 *.code-workspace
