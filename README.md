@@ -15,12 +15,12 @@ A deep learning model built with PyTorch to detect and classify common surface d
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 surface-defect-detector/
 │
-├── data/                 # Contains the training and validation images
+├── data/                 # Your training and validation images go here
 │   ├── train/
 │   └── val/
 │
@@ -28,6 +28,9 @@ surface-defect-detector/
 │
 ├── results/              # Stores output plots and logs
 │
+├── demo_images/          # Example defect images for testing the model
+|
+├── app.py                # Streamlit demo application
 ├── train.py              # The main script to run training
 ├── requirements.txt      # A list of Python dependencies
 └── README.md             # You are here!
@@ -44,11 +47,19 @@ Follow these steps to set up and run the project on your local machine.
 - Python 3.8+
 - pip package manager
 
-### 1. Set Up the Project
+### Set Up the Project
 
 First, create the main project folder. You can clone this repository from Git, or create the structure manually.
+To Clone the repository and install dependencies:
 
-### 2. Download and Organize the Dataset
+```bash
+git clone https://github.com/ash53/Surface_Defect_Detector.git
+cd Surface_Defect_Detector
+pip install -r requirements.txt
+```
+
+
+### Download and Organize the Dataset
 
 This is the most important manual step.
 
@@ -56,16 +67,6 @@ This is the most important manual step.
 2.  **Create** the `data/train` and `data/val` directories.
 3.  **Split** the images from the downloaded dataset into the `train` and `val` folders. A good split is 80% for training and 20% for validation.
 4.  **Ensure** the final structure inside the `data` folder matches the one described in the "Project Structure" section, with a subfolder for each defect type.
-
-### 3. Install Dependencies
-
-Navigate to the project's root directory in your terminal and install the required libraries using the `requirements.txt` file.
-
-```bash
-pip install -r requirements.txt
-```
-
----
 
 ## How to Run
 
@@ -83,6 +84,14 @@ pip install -r requirements.txt
     ```
 
 The script will start the training process and print the loss and accuracy for each epoch.
+
+3. **Running the Demo** Launch the Streamlit app:
+
+   ```bash
+   streamlit run app.py
+   ```
+
+This will start a web interface to test the model with example defect images.
 
 ---
 
