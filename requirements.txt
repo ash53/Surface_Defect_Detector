@@ -3,3 +3,5 @@ torchvision
 numpy
 matplotlib
 Pillow
+streamlit-image-select>=0.6.0
+st-clickable-images
